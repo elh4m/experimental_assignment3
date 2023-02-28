@@ -1,10 +1,12 @@
 # project 3 of experimental robotics course (university of Genova)
 This project builds upon the work that was completed in project 1 and 2 of the experimental robotics course. Information about the two earlier projects can be located here.
+
 https://github.com/elh4m/exprimental_robotics_1
 
 https://github.com/elh4m/experimental_robotics_2
 
 **PROJECT DESCRIPTION**:
+
 In the previous version, a ROS package was created to simulate a Clauedo game in the Gazebo environment, where a robot navigates and gathers clues to form a hypothesis about the killer. In this new version, the simulation has been improved with more advanced features and the robot's technology has been upgraded. The simulation now includes six rooms, each with five ArUco markers in different locations, making a total of thirty ArUco markers in the entire environment.
 The robot in the simulation needs to explore each room and locate the ArUco markers, which represent clues. After scanning a marker, the robot obtains its unique identifier (id) and can then request the corresponding hint from the '/oracle_hint' service. The robot then loads the received hint into the Armor reasoner and checks for any complete deduced hypotheses.
 
@@ -94,6 +96,8 @@ Similar to previous node, this node uses raw images of the environment captures 
 
 
 https://user-images.githubusercontent.com/77781922/221908745-79a6994b-ab0b-42f8-9f1f-71dbb617ef34.mp4
+
+
 
 
 
