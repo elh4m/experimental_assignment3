@@ -1,18 +1,24 @@
 # project 3 of experimental robotics course (university of Genova)
 This project builds upon the work that was completed in project 1 and 2 of the experimental robotics course. Information about the two earlier projects can be located here.
 https://github.com/elh4m/exprimental_robotics_1
+
 https://github.com/elh4m/experimental_robotics_2
 
 PROJECT DESCRIPTION:
+
 In the previous version, a ROS package was created to simulate a Clauedo game in the Gazebo environment, where a robot navigates and gathers clues to form a hypothesis about the killer. In this new version, the simulation has been improved with more advanced features and the robot's technology has been upgraded. The simulation now includes six rooms, each with five ArUco markers in different locations, making a total of thirty ArUco markers in the entire environment.
 The robot in the simulation needs to explore each room and locate the ArUco markers, which represent clues. After scanning a marker, the robot obtains its unique identifier (id) and can then request the corresponding hint from the '/oracle_hint' service. The robot then loads the received hint into the Armor reasoner and checks for any complete deduced hypotheses.
 
 Similar to the previous two projects the deduced hypotheses has to be complete and correct. For a hypothesis to be complete it has to be based on three different types of hints (who,where,what). Hypothesis is correct when firstly its complete and secondly its ID needs to match the ID of the correct hypothesis which is decided by the oracle node. The correct ID can be requested from the oracle node using the service '/oracle_solution'. The hints are of following types:
 
 1.who: Robot can find a name of a person as a hint which can be a killer e.g: Prof. Plum.
+
 2.what: Robot can find a name of a weapon as a hint which killer might have used e.g: Dagger.
+
 3.where: Robot can find a name of random place where the crime might have been committed e.g: Hall.
+
 Statement of a consistent hypothesis will be something like this:
+
 �Prof. Plum with the Dagger in the Hall�. Incase the deduced hypotheses is wrong then the robot will resume its exploration for new hints until it forms a consistent hypothesis.
 
 Similar to the previous project, ARMOR package has been used to deduced the hypothesis which is developed by researchers at University of Genova. ARMOR is versatile management system that can handle single or multiple-ontology architectures under ROS. Please find more details regarding ARMOR from here: https://github.com/EmaroLab/armor
@@ -24,20 +30,23 @@ Code available in Main branch is a ROS-Noetic package which should be place in R
 To successfully deploy and build the package run the following command.
 
 1.catkin_make
+
 2.source devel/setup.bash
 
 In order to use the python modules contained in armor_py_api package run the following command to add the path of the armor python modules to your PYTHONPATH environmental variable.
 
-3.export PYTHONPATH=$PYTHONPATH:/root/ros_ws/src/armor/armor_py_api/scripts/armor_api/
+3. export PYTHONPATH=$PYTHONPATH:/root/ros_ws/src/armor/armor_py_api/scripts/armor_api/
 
 Download the 'cluedo_ontology.owl' file provided in this repository and place it in your system '/root/Desktop/' directory.
 
 RUNNING THE PROJECT SIMULATION:
 
 After successfully installing the python package and other dependecies open a command window and start ROS master by using the following command:
+
 -roscore&
 
 After that start the ARMOR service by using the following command:
+
 
 -rosrun armor execute it.emarolab.armor.ARMORMainService
 
@@ -50,6 +59,7 @@ After running the command wait for the system to load all the files. Once all no
 -roslaunch exp_assignment3 assignment_services.launch
 
 SOFTWARE ARCHITECTURE OF THE PROJECT:
+
 The project architecture is based on the following main nodes
 
 ![PROJECT3](https://user-images.githubusercontent.com/77781922/221897312-dde39740-4522-4d85-9112-28e22a940931.PNG)
@@ -90,8 +100,12 @@ https://user-images.githubusercontent.com/77781922/221908745-79a6994b-ab0b-42f8-
 
 
 
+
+
 CONTACT INFO:
+
 author:ELham Mohammadi 5073904
+
 email:elhmohamadii@gmail.com
 
 
