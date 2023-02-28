@@ -48,19 +48,19 @@ Download the 'cluedo_ontology.owl' file provided in this repository and place it
 
 After successfully installing the python package and other dependecies open a command window and start ROS master by using the following command:
 ```
--roscore&
+ roscore&
 ```
 After that start the ARMOR service by using the following command:
 ```
--rosrun armor execute it.emarolab.armor.ARMORMainService
+ rosrun armor execute it.emarolab.armor.ARMORMainService
 ```
 Open the new tab in command terminal and run the ROS launch file to start the simulation by using the following command:
 ```
--roslaunch exp_assignment3 simulation.launch
+ roslaunch exp_assignment3 simulation.launch
 ```
 After running the command wait for the system to load all the files. Once all nodes are loaded open another terminal and execute 'assignment_services' launch file by running the following command:
 ```
--roslaunch exp_assignment3 assignment_services.launch
+ roslaunch exp_assignment3 assignment_services.launch
 ```
 SOFTWARE ARCHITECTURE OF THE PROJECT:
 
