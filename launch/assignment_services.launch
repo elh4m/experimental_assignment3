@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+
+<launch>
+
+    <node pkg="exp_assignment3" type="final_oracle" name="final_oracle"/>
+    <node pkg="exp_assignment3" type="hint_collector" name="hint_collector" output="screen" />
+    <node pkg="exp_assignment3" type="hint_loader.py" name="hint_loader_server" output="screen"/>
+    <node pkg="exp_assignment3" type="follow_marker_service.py" name="follow_marker_service" output="screen"/>
+    <node pkg="aruco_ros" type="marker_publisher" name="marker_publisher_cam1_server"
+        args= "/image:=/camera1/image_raw"/>
+    <node pkg="aruco_ros" type="marker_publisher" name="marker_publisher_cam2_server"
+        args= "/image:=/camera2/image_raw"/>    
+    <node pkg="exp_assignment3" type="simple_action" name="simple_action_server" output= "screen"/>
+
+</launch>

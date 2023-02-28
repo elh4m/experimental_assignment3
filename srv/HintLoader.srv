@@ -1,0 +1,6 @@
+erl2/ErlOracle req
+---
+bool res
+string hintStatement
+bool hintLoaded
+bool completeHypo

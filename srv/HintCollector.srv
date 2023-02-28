@@ -1,0 +1,6 @@
+string req
+int32 markerId
+---
+string hintStatement
+bool hintLoaded
+bool completeHypo
