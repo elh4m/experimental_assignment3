@@ -4,8 +4,7 @@ https://github.com/elh4m/exprimental_robotics_1
 
 https://github.com/elh4m/experimental_robotics_2
 
-PROJECT DESCRIPTION:
-
+##PROJECT DESCRIPTION:
 In the previous version, a ROS package was created to simulate a Clauedo game in the Gazebo environment, where a robot navigates and gathers clues to form a hypothesis about the killer. In this new version, the simulation has been improved with more advanced features and the robot's technology has been upgraded. The simulation now includes six rooms, each with five ArUco markers in different locations, making a total of thirty ArUco markers in the entire environment.
 The robot in the simulation needs to explore each room and locate the ArUco markers, which represent clues. After scanning a marker, the robot obtains its unique identifier (id) and can then request the corresponding hint from the '/oracle_hint' service. The robot then loads the received hint into the Armor reasoner and checks for any complete deduced hypotheses.
 
@@ -23,28 +22,27 @@ Statement of a consistent hypothesis will be something like this:
 
 Similar to the previous project, ARMOR package has been used to deduced the hypothesis which is developed by researchers at University of Genova. ARMOR is versatile management system that can handle single or multiple-ontology architectures under ROS. Please find more details regarding ARMOR from here: https://github.com/EmaroLab/armor
 
-PROJECT INSTALLATION:
+##PROJECT INSTALLATION:
 
 This project requires ROS with ARMOR,For installing ARMOR package please follow the instructions available in this respository: https://github.com/EmaroLab/armor.
 Code available in Main branch is a ROS-Noetic package which should be place in ROS workspace {ros1_ws}/src after downloading.
 To successfully deploy and build the package run the following command.
-
+```
 1.catkin_make
-
 2.source devel/setup.bash
-
+```
 In order to use the python modules contained in armor_py_api package run the following command to add the path of the armor python modules to your PYTHONPATH environmental variable.
-
+```
 3. export PYTHONPATH=$PYTHONPATH:/root/ros_ws/src/armor/armor_py_api/scripts/armor_api/
-
+```
 Download the 'cluedo_ontology.owl' file provided in this repository and place it in your system '/root/Desktop/' directory.
 
-RUNNING THE PROJECT SIMULATION:
+##RUNNING THE PROJECT SIMULATION:
 
 After successfully installing the python package and other dependecies open a command window and start ROS master by using the following command:
-
+```
 -roscore&
-
+```
 After that start the ARMOR service by using the following command:
 
 
@@ -102,7 +100,8 @@ https://user-images.githubusercontent.com/77781922/221908745-79a6994b-ab0b-42f8-
 
 
 
-CONTACT INFO:
+
+##CONTACT INFO:
 
 author:ELham Mohammadi 5073904
 
