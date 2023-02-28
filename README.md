@@ -29,6 +29,11 @@ Similar to the previous project, ARMOR package has been used to deduced the hypo
 This project requires ROS with ARMOR,For installing ARMOR package please follow the instructions available in this respository: https://github.com/EmaroLab/armor.
 Code available in Main branch is a ROS-Noetic package which should be place in ROS workspace {ros1_ws}/src after downloading.
 To successfully deploy and build the package run the following command.
+
+please refer to this repository if you do not already have the aruco_ros package:
+```
+https://github.com/CarmineD8/aruco_ros
+```
 ```
 1.catkin_make
 2.source devel/setup.bash
