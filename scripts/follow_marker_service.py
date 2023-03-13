@@ -19,7 +19,7 @@
 # /aruco_marker_id
 # /camera2/image_raw/compressed
 #
-# This node waits for 'hint_loader_service' service's request from the 'simple_action' node to start the exploration behavior; 
+# This node waits for 'request_follow_marker' service's request from the 'simple_action' node to start the exploration behavior; 
 # in which the robot starts rotating on its own axis until it sees aruco marker in its field of vision. Once a marker is detected, the
 # robot starts moving closer to the marker until it is able to scan the marker. Once the marker is scaned and its 'id' has been retrive
 # the exploration behavior stops and the node returns the marker's id as response to the service request. 
