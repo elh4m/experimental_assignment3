@@ -96,18 +96,6 @@ marker_publisher_cam2 | marker_publish_cam2.cpp
 
 Similar to previous node, this node uses raw images of the environment captures from camera2 of the robot and ArUco libraries to scan ArUco marker in the Gazebo simulation. Once the marker is scaned it publishes the marker's id in the topic '/aruco_marker_id'.
 
-**PROJECT SIMULATION DEMO**:
-
-
-
-https://user-images.githubusercontent.com/77781922/221908745-79a6994b-ab0b-42f8-9f1f-71dbb617ef34.mp4
-
-
-
-
-
-
-
 
 **CONTACT INFO**:
 
